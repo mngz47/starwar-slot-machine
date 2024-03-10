@@ -8,6 +8,18 @@
     />
   </head>
   <body>
+    
+<div id=start style="position: absolute;background-color:rgba(0,0,0,0.7);width:100%;height:100%;z-index:1000;" >
+   <h4>Credits:</h4>
+   <div style='margin-top:200px;' ><input type=number id=credits value=40 placeholder=credits /><button onclick='monetize_purchase(e("credits").value);return false;' >buy</button></div>
+</div>
+   <script>
+      toggle(e("start"));
+   </script>
+
+   <h4 id=credits style='position:absolute;float:right;margin:4px;background:rgba(0,0,0,0.7);color:white;' ></h4>
+   
+    
     <div id="slot">
       <div id="jackpot">Jackpot: <span id="jp">5.555.555</span></div>
       <div id="reels">
@@ -18,12 +30,16 @@
         <div class="reel"></div>
       </div>
       <div id="controls">
-        <button type="button" id="spin">SPIN</button>
+        <button type="button" id="spin" onclick="track_action();" >SPIN</button>
         <label>
           <input type="checkbox" name="autoplay" id="autoplay" />
           Autoplay
         </label>
       </div>
     </div>
+    <script src=https://mngz47.github.io/F-Snake/rr/api.js ></script>
+    <script src=https://mngz47.github.io/F-Snake/rr/cookie.js ></script>
+    <script src=https://mngz47.github.io/F-Snake/rr/payfast.js ></script>
+    <script src=https://mngz47.github.io/pamel_slots/rr/monetize.js ></script>
   </body>
 </html>
